@@ -4,7 +4,8 @@
   "description": "criacao de projeto node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/feLargato/Integracao/issues"
   },
-  "homepage": "https://github.com/feLargato/Integracao#readme"
+  "homepage": "https://github.com/feLargato/Integracao#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express-handlebars": "^6.0.3",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15"
+  }
 }
