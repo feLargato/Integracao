@@ -4,33 +4,33 @@ const server = express();
 
 server.use(express.json());
 
-const alunos = [];
+const produto = '';
 
-server.post("/aluno", (req, res) => {
+server.post("/produto", (req, res) => {
     const { name } = req.body;
-    alunos.push(name);
+    produto.push(name);
 
-    return res.json(alunos);
+    return res.json(produto);
 });
 
-server.put('/aluno/:index', (req, res) => {
+server.put('/produto/:index', (req, res) => {
     const {index} = req.params;
     const { name } = req.body;
 
-    alunos[index] = name;
+    produto[index] = name;
 
-    return res.json(alunos);
+    return res.json(produto);
 })
 
-server.delete('/aluno/:index', (req, res) => {
+server.delete('/produto/:index', (req, res) => {
     const { index } = req.params;
-    alunos.splice(index, 1);
+    produto.splice(index, 1);
 
-    return res.json({ message: "aluno deletado"})
+    return res.json({ message: "produto deletado"})
 });
 
-server.get('/aluno', (req, res) => {
-    return res.json(alunos);
+server.get('/produto', (req, res) => {
+    return res.json(produto);
 });
 
 
